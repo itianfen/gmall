@@ -1,7 +1,7 @@
-package com.itianfen.gmall.user.service;
+package com.itianfen.gmall.service;
 
-import com.itianfen.gmall.user.bean.UmsMember;
-import com.itianfen.gmall.user.bean.UmsMemberReceiveAddress;
+import com.itianfen.gmall.bean.UmsMember;
+import com.itianfen.gmall.bean.UmsMemberReceiveAddress;
 
 import java.util.List;
 

@@ -1,11 +1,10 @@
 package com.itianfen.gmall.user.comtroller;
 
-import com.itianfen.gmall.user.bean.UmsMember;
-import com.itianfen.gmall.user.bean.UmsMemberReceiveAddress;
-import com.itianfen.gmall.user.service.UserService;
+import com.itianfen.gmall.bean.UmsMember;
+import com.itianfen.gmall.bean.UmsMemberReceiveAddress;
+import com.itianfen.gmall.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 
@@ -20,7 +19,7 @@ public class UserController {
     @RequestMapping("getReceiveAddressByMemberId")
     @ResponseBody
     public List<UmsMemberReceiveAddress> getReceiveAddressByMemberId(Long memberId) {
-        List<UmsMemberReceiveAddress> umsMemberReceiveAddresses=userService.getReceiveAddressByMemberId(memberId);
+        List<UmsMemberReceiveAddress> umsMemberReceiveAddresses = userService.getReceiveAddressByMemberId(memberId);
         return umsMemberReceiveAddresses;
     }
 
