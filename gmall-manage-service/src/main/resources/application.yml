@@ -1,0 +1,34 @@
+server:
+  port: 8071
+  servlet:
+    context-path: /
+
+spring:
+  datasource:
+    url: jdbc:mysql:///gmall?serverTimezone=UTC&useSSL=false
+    driver-class-name: com.mysql.jdbc.Driver
+    username: root
+    password: root
+  #dubbo
+  dubbo:
+    #d服务名称
+    application: manage-service
+    #zookeeper
+    registry:
+      #注册中心的地址
+      address: 192.168.153.128:2181
+      #注册中心的协议
+      protocol: zookeeper
+    #协议名
+    protocol:
+      name: dubbo
+    #服务扫描路径
+    base-package: com.itianfen.gmall
+mybatis:
+  type-aliases-package: com.itianfen.gmall.bean
+  configuration:
+    map-underscore-to-camel-case: true
+  mapper-locations: classpath:mapper/*.xml
+logging:
+  level:
+    root: info
